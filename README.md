@@ -1,6 +1,6 @@
 # Threat Hunting - Suspicious Link Analysis
 
-Este repositorio documenta mi **primer ejercicio de threat hunting**, basado en el análisis de un enlace sospechoso recibido de forma externa.  
+Este repositorio documenta mi **tercer ejercicio de threat hunting**, basado en el análisis de un enlace sospechoso.  
 El objetivo principal es aprender y practicar técnicas de investigación con **VirusTotal**, documentando cada paso y compartiendo hallazgos.
 
 ---
@@ -21,23 +21,37 @@ Aclaro que **no avancé en el proceso de la llamada**. Solo investigué el enlac
 ### 1. Análisis inicial en VirusTotal
 - El **enlace completo** no arrojaba detecciones sospechosas.  
 - Separé el enlace en sus componentes:
-  - **Dominio + ruta principal**
-  - Datos ilegibles (`s2`, `s3`, `s4`, `s5`) → descartados por falta de valor en el análisis.  
+  - **Dominio + ruta principal** → quitando los datos ilegibles.
+  - Datos ilegibles 
+  - s2=eda4b0a0-37c3-4bff-a82b-4220dbf623f8
+  - s3=PAZXh0bgNhZW0BMABhZGlkAasifuT2m1QBp7H-ZvsrLXgXdceM4xWIxRyjg7rITIjUquHxdqJMg_nF__8g_nIg7bifVJ-3_aem_zHjuhljbnTAQQaLDECB7IQ
+  - s4=2e30efcd-0ee3-43a7-a3c5-b0563004e2e5
+  - s5=xm2ee3126dbbyfmjeb6lq
+
+Los mismos estaban concatenados con un &.
 
 ### 2. Resultados en VirusTotal
 - El **dominio y la ruta** fueron detectados como:
   - **Phishing**
   - **Sospechoso**
+
+ ![Figura 1](/images/2.png)
+
 - En la pestaña **Details** identifiqué:
   - Dirección **IP** asociada.
   - **Body SHA-256 hash** del contenido.
+ 
+ ![Figura 2](/images/3.png)
+
 - Este hash arrojó detección como:  
   - `HTML/hoax.Agent.P` → también conocido como:  
     - `HTML/Phishing.Agent`  
-    - `HTML/Phishing.Agent.BDI` (ESET)  
-    - `JS[Phish]` (Avast)  
+    - `HTML/Phishing.Agent.BDI` 
+    - `JS[Phish]`
 
 👉 Distribución habitual: correos con archivos HTML adjuntos o enlaces que redirigen a formularios falsos.
+
+ ![Figura 3](/images/4.png)
 
 ### 3. Relaciones y comportamiento
 - En **Relations** encontré:
