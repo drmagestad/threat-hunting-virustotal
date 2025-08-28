@@ -65,21 +65,21 @@ Por eso decidí repetir el análisis para obtener información más actualizada.
 
 ### 3. Relaciones y comportamiento
 - En **Relations** encontré:
-  - Varias **URLs contactadas**.  
+  - Dos **URLs contactadas**.  
   - Más de **55 direcciones IP** a las que intentaba conectarse.  
   - Una de esas IP estaba marcada como **maliciosa** → también fue analizada en VirusTotal. 
 
- ![Figura 5](/images/6.png)
-
 👉 Esto me permitió obtener una visión más completa y actualizada del caso.
 
-### 3. Relaciones y comportamiento
-- En **Relations** encontré:
-  - Varias **URLs contactadas**.  
-  - Más de **55 direcciones IP** a las que intentaba conectarse.  
-  - Una de esas IP estaba marcada como **maliciosa** → también fue analizada en VirusTotal.  
+ ![Figura 5](/images/6.png)
 
----
+En la imagen se observa 
+ 
+ ![Figura 6](/images/7.png)
+
+
+
+
 
 ## 📂 Archivos en este repositorio
 - `/reports` → capturas y reportes exportados de VirusTotal.  
