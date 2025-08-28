@@ -63,6 +63,8 @@ Por eso decidí repetir el análisis para obtener información más actualizada.
   - Se agregaron más detalles en la sección **Relations**.  
   - También surgieron nuevos datos en la sección **Behavior**.  
 
+ ![Figura 5](/images/6.png)
+
 👉 Esto me permitió obtener una visión más completa y actualizada del caso.
 
 ### 3. Relaciones y comportamiento
