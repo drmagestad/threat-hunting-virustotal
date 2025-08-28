@@ -49,9 +49,21 @@ Los mismos estaban concatenados con un &.
     - `HTML/Phishing.Agent.BDI` 
     - `JS[Phish]`
 
-👉 Distribución habitual: correos con archivos HTML adjuntos o enlaces que redirigen a formularios falsos.
+Distribución habitual: correos con archivos HTML adjuntos o enlaces que redirigen a formularios falsos.
 
  ![Figura 3](/images/4.png)
+
+Al revisar los resultados, noté que el análisis disponible en VirusTotal había sido realizado hace un tiempo.  
+Por eso decidí repetir el análisis para obtener información más actualizada.
+
+ ![Figura 4](/images/5.png)
+
+- **Resultados adicionales**:  
+  - Aparecieron **más detecciones y etiquetas** que antes no estaban presentes.  
+  - Se agregaron más detalles en la sección **Relations**.  
+  - También surgieron nuevos datos en la sección **Behavior**.  
+
+👉 Esto me permitió obtener una visión más completa y actualizada del caso.
 
 ### 3. Relaciones y comportamiento
 - En **Relations** encontré:
