@@ -64,16 +64,25 @@ Por eso decidí repetir el análisis para obtener información más actualizada.
   - También surgieron nuevos datos en la sección **Behavior**.  
 
 ### 3. Relaciones y comportamiento
-- En **Relations** encontré:
-  - Dos **URLs contactadas**.  
-  - Más de **55 direcciones IP** a las que intentaba conectarse.  
+- En la sección **Relations** del reanálisis se identificaron **dos URLs con código de estado 200 (OK)**.
+
+ ![Figura 5](/images/6.png)
+
+Esto me llevó a dar el siguiente paso:
+  - Analicé cada URL por separado en VirusTotal para evaluar comportamiento y reputación.  
+  - Consideré utilizar una **máquina virtual (VM) aislada** para acceder a las direcciones y revisar el contenido de forma controlada.
+
+ ![Figura 6](/images/8.png)
+
+Solo una de ellas me genero un poco de sospecha 
+  - Más de **55 direcciones IP** a las que intentaba conectarse
   - Una de esas IP estaba marcada como **maliciosa** → también fue analizada en VirusTotal. 
 
 👉 Esto me permitió obtener una visión más completa y actualizada del caso.
 
  ![Figura 5](/images/6.png)
 
-En la imagen se observa 
+En la imagen se observan las dos URLs con codigo de status 200, lo que me lleva a analizarlas una por una, tambien se me ocurrio abrir una VM y acceder a las direcciones para ver su contenido.
  
  ![Figura 6](/images/7.png)
 
