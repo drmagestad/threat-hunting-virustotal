@@ -68,7 +68,7 @@ Por eso decidí repetir el análisis para obtener información más actualizada.
   - `HTML.Trojan.Agent.10JMG5` (GData)
 
   ### 3. Relaciones y comportamiento
-- En la sección **Relations** del reanálisis se identificaron **dos URLs con código de estado 200 (OK)**.
+- En la sección **Relations**, dentro de **Contacted URLs** no encontre nada que me llame la atencion.
 
  ![Figura 5](/images/6.png)
 
