@@ -43,11 +43,11 @@ Los mismos estaban concatenados con un &.
  
  ![Figura 2](/images/3.png)
 
-- Este hash arrojó detección como:  
+- **Este hash arrojó detección como:**  
   - `HTML/hoax.Agent.P` → también conocido como:  
     - `HTML/Phishing.Agent`  
-    - `HTML/Phishing.Agent.BDI` 
-    - `JS[Phish]`
+    - `HTML/Phishing.Agent.BDI` (ESET)  
+    - `JS[Phish]` (Avast)
 
 Distribución habitual: correos con archivos HTML adjuntos o enlaces que redirigen a formularios falsos.
 
@@ -59,11 +59,15 @@ Por eso decidí repetir el análisis para obtener información más actualizada.
  ![Figura 4](/images/5.png)
 
 - **Resultados adicionales**:  
-  - Aparecieron **más detecciones y etiquetas** que antes no estaban presentes.  
-  - Se agregaron más detalles en la sección **Relations**.  
-  - También surgieron nuevos datos en la sección **Behavior**.  
+  - Aparecieron **más detecciones y etiquetas** que antes no estaban presentes.
 
-### 3. Relaciones y comportamiento
+- **El nuevo analisis del hash arrojó detección como:**  
+  - `Trojan:Win/Hoax.Akgpp` (AliCloud)  
+  - `Other:SNH-gen [Phish]` (AVG, Avast)  
+  - `HTML/Hoax.Agent.P` (ESET-NOD32)  
+  - `HTML.Trojan.Agent.10JMG5` (GData)
+
+  ### 3. Relaciones y comportamiento
 - En la sección **Relations** del reanálisis se identificaron **dos URLs con código de estado 200 (OK)**.
 
  ![Figura 5](/images/6.png)
@@ -74,7 +78,10 @@ Esto me llevó a dar el siguiente paso:
 
  ![Figura 6](/images/8.png)
 
-Solo una de ellas me genero un poco de sospecha 
+
+
+
+ 
   - Más de **55 direcciones IP** a las que intentaba conectarse
   - Una de esas IP estaba marcada como **maliciosa** → también fue analizada en VirusTotal. 
 
