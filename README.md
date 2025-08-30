@@ -72,10 +72,10 @@ Por eso decidí repetir el análisis para obtener información más actualizada.
 
  ![Figura 5](/images/6.png)
 
-Esto me llevó a dar el siguiente paso:
-  - Analicé cada URL por separado en VirusTotal para evaluar comportamiento y reputación.  
-  - Consideré utilizar una **máquina virtual (VM) aislada** para acceder a las direcciones y revisar el contenido de forma controlada.
-
+Esto me enseñó lo siguiente:
+  - Un sitio web HTTPS siempre necesita comprobar certificados → aunque hay ciertas coindiciones que hacen que esto no siempre se cumpla.
+  - Un navegador/cliente suele sincronizar hora o validar seguridad con sus propios servidores.
+ 
  ![Figura 6](/images/8.png)
 
 
