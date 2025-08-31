@@ -73,19 +73,20 @@ Por eso decidí repetir el análisis para obtener información más actualizada.
 
  ![Figura 5](/images/6.png)
 
-  - Dentro de **Contacted IP addresses** obesrve mas de **55 direcciones IP** a las cuales habia logrado una conexion.
+  - Dentro de **Contacted IP addresses** obesrve mas de **55 direcciones IP**.
   - Una de esas IP estaba marcada como **maliciosa** → también fue analizada en VirusTotal. 
 
-👉 Esto me permitió obtener una visión más completa y actualizada del caso.
+ <div align="center">
+  
+  ![Figura 6](/images/7.png)
 
- ![Figura 5](/images/6.png)
+</div>
 
-En la imagen se observan las dos URLs con codigo de status 200, lo que me lleva a analizarlas una por una, tambien se me ocurrio abrir una VM y acceder a las direcciones para ver su contenido.
- 
- ![Figura 6](/images/7.png)
+  - Cabe destacar que esta detección provino de un **solo motor de antivirus**.  
+  - Esto **no garantiza que la IP sea maliciosa**, ya que podría tratarse de un **falso positivo**.  
+  - En algunos casos, la alerta se debe a la **reputación histórica** de la IP y no a actividad maliciosa activa.  
 
-
-
+  ![Figura 7](/images/8.png)
 
 
 ## 📂 Archivos en este repositorio
