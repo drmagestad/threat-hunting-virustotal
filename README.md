@@ -88,11 +88,39 @@ Por eso decidí repetir el análisis para obtener información más actualizada.
 
   ![Figura 7](/images/8.png)
 
+- Revisé el **certificado SSL/TLS** del dominio.  
+  - Versión: V1  
+  - Emisor: `C=US, CN=global.qwilt.com`  
+  - Validez: desde `2019-01-10` hasta su fecha de expiración  
+  - Número de serie y thumbprint disponibles en VirusTotal
 
-## 📂 Archivos en este repositorio
-- `/reports` → capturas y reportes exportados de VirusTotal.  
-- `/images` → imágenes de apoyo (con datos sensibles difuminados).  
-- `README.md` → este documento.  
+- Observaciones:  
+  - El certificado **no presenta alertas de revocación**, pero está emitido por un **CA de reputación general**.
+  - La validez del certificado es **inusualmente larga** (casi 100 años), lo que es atípico en certificados SSL/TLS legítimos
+  - Esto indica que el sitio **podría cifrar la comunicación**, pero **no garantiza legitimidad** del contenido ni que el dominio sea seguro.  
+
+
+<div align="center">
+  
+  ![Figura 8](/images/9.png)
+
+</div>
+
+
+VirusTotal reporta varios archivos que se han **comunicado con el dominio** analizado, con distintos niveles de detección:
+
+  ![Figura 9](/images/10.png)
+
+
+- Algunos archivos presentan **alta detección**, indicando que el dominio ha estado relacionado con **malware o software potencialmente peligroso**.  
+- Otros archivos no muestran detecciones, lo que podría deberse a **archivos legítimos o falsos positivos**.
+
+Además, en la sección **Contained in Graphs**, el dominio aparece vinculado a **múltiples actividades maliciosas documentadas por la comunidad**, como campañas relacionadas con **KoiLoader, Quakbot, HijackLoader y DarkCloud**:
+
+  ![Figura 10](/images/11.png)
+
+- En conjunto, estos hallazgos refuerzan la hipótesis de que el dominio **no es confiable** y puede ser utilizado como **vector de phishing o distribución de malware**.
+
 
 ---
 
