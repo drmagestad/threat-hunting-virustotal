@@ -119,7 +119,7 @@ Además, en la sección **Contained in Graphs**, el dominio aparece vinculado a 
 
   ![Figura 10](/images/11.png)
 
-- En conjunto, estos hallazgos refuerzan la hipótesis de que el dominio **no es confiable** y puede ser utilizado como **vector de phishing o distribución de malware**.
+- En conjunto, estos hallazgos refuerzan la hipótesis de que la direccion IP **no es confiable** y puede ser utilizada como **vector de phishing o distribución de malware**.
 
 
 ---
