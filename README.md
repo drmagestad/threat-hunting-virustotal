@@ -68,20 +68,12 @@ Por eso decidí repetir el análisis para obtener información más actualizada.
   - `HTML.Trojan.Agent.10JMG5` (GData)
 
   ### 3. Relaciones y comportamiento
-- En la sección **Relations**, dentro de **Contacted URLs** no encontre nada que me llame la atencion.
+  - En la sección **Relations**, dentro de **Contacted URLs** no encontre nada que me llame la atencion.
+  - Si bien las conexiones aparecen como HTTP, corresponden a servicios legítimos (Google y Let's Encrypt) y no representan riesgo, ya que los datos transmitidos no son sensibles ni maliciosos.
 
  ![Figura 5](/images/6.png)
 
-Esto me enseñó lo siguiente:
-  - Si bien las conexiones aparecen como HTTP, corresponden a servicios legítimos (Google y Let's Encrypt) y no representan riesgo, ya que los datos transmitidos no son sensibles ni maliciosos.
- 
- ![Figura 6](/images/8.png)
-
-
-
-
- 
-  - Más de **55 direcciones IP** a las que intentaba conectarse
+  - Dentro de **Contacted IP addresses** obesrve mas de **55 direcciones IP** a las cuales habia logrado una conexion.
   - Una de esas IP estaba marcada como **maliciosa** → también fue analizada en VirusTotal. 
 
 👉 Esto me permitió obtener una visión más completa y actualizada del caso.
