@@ -73,8 +73,7 @@ Por eso decidí repetir el análisis para obtener información más actualizada.
  ![Figura 5](/images/6.png)
 
 Esto me enseñó lo siguiente:
-  - Un sitio web HTTPS siempre necesita comprobar certificados → aunque hay ciertas coindiciones que hacen que esto no siempre se cumpla.
-  - Un navegador/cliente suele sincronizar hora o validar seguridad con sus propios servidores.
+  - Si bien las conexiones aparecen como HTTP, corresponden a servicios legítimos (Google y Let's Encrypt) y no representan riesgo, ya que los datos transmitidos no son sensibles ni maliciosos.
  
  ![Figura 6](/images/8.png)
 
