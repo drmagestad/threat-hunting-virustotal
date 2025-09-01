@@ -119,6 +119,8 @@ Además, en la sección **Contained in Graphs**, la dirección IP aparece vincul
 
 - En conjunto, estos hallazgos refuerzan la hipótesis de que la direccion IP **no es confiable** y puede ser utilizada como **vector de phishing o distribución de malware**.
 
+Volviendo al **hash** analizado anteriormente, lo último que revisaremos es la sección **Behavior**, que muestra las acciones observadas durante la ejecución o interacción de los archivos asociados con el dominio analizado.
+
 
 ---
 
