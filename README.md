@@ -67,7 +67,7 @@ Por eso decidí repetir el análisis para obtener información más actualizada.
   - `HTML/Hoax.Agent.P` (ESET-NOD32)  
   - `HTML.Trojan.Agent.10JMG5` (GData)
 
-  ### 3. Relaciones y comportamiento
+### 3. Relaciones y comportamiento
   - En la sección **Relations**, dentro de **Contacted URLs** no encontre nada que me llame la atencion.
   - Si bien las conexiones aparecen como HTTP, corresponden a servicios legítimos (Google y Let's Encrypt) y no representan riesgo, ya que los datos transmitidos no son sensibles ni maliciosos.
 
@@ -88,34 +88,32 @@ Por eso decidí repetir el análisis para obtener información más actualizada.
 
   ![Figura 7](/images/8.png)
 
-- Revisé el **certificado SSL/TLS** del dominio.  
+- Revisé el **certificado SSL/TLS** presentado por la dirección IP analizada.
   - Versión: V1  
   - Emisor: `C=US, CN=global.qwilt.com`  
   - Validez: desde `2019-01-10` hasta su fecha de expiración  
   - Número de serie y thumbprint disponibles en VirusTotal
 
 - Observaciones:  
-  - El certificado **no presenta alertas de revocación**, pero está emitido por un **CA de reputación general**.
-  - La validez del certificado es **inusualmente larga** (casi 100 años), lo que es atípico en certificados SSL/TLS legítimos
-  - Esto indica que el sitio **podría cifrar la comunicación**, pero **no garantiza legitimidad** del contenido ni que el dominio sea seguro.  
-
-
+  - El certificado está en versión **V1**, lo cual es inusual, ya que los estándares actuales utilizan **V3** con medidas de seguridad adicionales.  
+  - La validez del certificado es **inusualmente larga** (casi 100 años), lo que es atípico en certificados SSL/TLS legítimos.  
+  - El certificado **no presenta alertas de revocación**, pero está emitido por un **CA de reputación general**.  
+  - Esto indica que la IP **podría cifrar la comunicación**, pero **no garantiza la legitimidad del contenido** ni que el servicio sea seguro.
+ 
 <div align="center">
   
   ![Figura 8](/images/9.png)
 
 </div>
 
-
-VirusTotal reporta varios archivos que se han **comunicado con el dominio** analizado, con distintos niveles de detección:
+VirusTotal reporta varios archivos que se han comunicado con la dirección IP analizada, con distintos niveles de detección.
 
   ![Figura 9](/images/10.png)
 
-
-- Algunos archivos presentan **alta detección**, indicando que el dominio ha estado relacionado con **malware o software potencialmente peligroso**.  
+- Algunos archivos presentan **alta detección**, indicando que la dirección IP ha estado relacionado con **malware o software potencialmente peligroso**.  
 - Otros archivos no muestran detecciones, lo que podría deberse a **archivos legítimos o falsos positivos**.
 
-Además, en la sección **Contained in Graphs**, el dominio aparece vinculado a **múltiples actividades maliciosas documentadas por la comunidad**, como campañas relacionadas con **KoiLoader, Quakbot, HijackLoader y DarkCloud**:
+Además, en la sección **Contained in Graphs**, la dirección IP aparece vinculada a **múltiples actividades maliciosas documentadas por la comunidad**, como campañas relacionadas con **KoiLoader, Quakbot, HijackLoader y DarkCloud**.
 
   ![Figura 10](/images/11.png)
 
