@@ -1,27 +1,30 @@
 # Threat Hunting - Suspicious Link Analysis
 
-Este repositorio documenta mi **tercer ejercicio de threat hunting**, basado en el análisis de un enlace sospechoso.  
-El objetivo principal es aprender y practicar técnicas de investigación con **VirusTotal**, documentando cada paso y compartiendo hallazgos.
+Este repositorio documenta un **ejercicio de threat hunting**, basado en el análisis de un enlace sospechoso.
+El objetivo principal es **aprender y practicar técnicas de investigación con VirusTotal**, documentando cada paso y compartiendo hallazgos.
 
 ---
 
 ## 📌 Contexto
-El enlace recibido simulaba ser parte de una plataforma de inversión.  
+El enlace recibido simulaba ser parte de una **plataforma de inversión**.
 El proceso descrito era:
-1. Ingresar datos personales (nombre, apellido, correo y teléfono).
-2. Recibir una llamada de un supuesto "asesor" solicitando una inversión inicial de **10.000 pesos**.
-3. (Hipótesis) Posible entrega de un **APK malicioso** en una etapa posterior.  
-   
-Aclaro que **no avancé en el proceso de la llamada**. Solo investigué el enlace.
+
+Ingresar datos personales (**nombre, apellido, correo y teléfono**).
+
+Recibir una llamada de un supuesto **"asesor"** solicitando una **inversión inicial de 10.000 pesos.**
+
+**(Hipótesis)** Posible entrega de un APK malicioso en una etapa posterior.
+
+Aclaro que **no avancé en el proceso de la llamada**. Solo investigué el enlace.  
 
 ---
 
 ## 🔍 Análisis realizado
 
 ### 1. Análisis inicial en VirusTotal
-- El **enlace completo** no arrojaba detecciones sospechosas.  
-- Separé el enlace en sus componentes:
-  - **Dominio + ruta principal** → quitando los datos ilegibles.
+El enlace completo no arrojaba detecciones sospechosas.
+Separé el enlace en sus componentes:
+Dominio + ruta principal → quitando los datos ilegibles.
   - Datos ilegibles 
   - s2=eda4b0a0-37c3-4bff-a82b-4220dbf623f8
   - s3=PAZXh0bgNhZW0BMABhZGlkAasifuT2m1QBp7H-ZvsrLXgXdceM4xWIxRyjg7rITIjUquHxdqJMg_nF__8g_nIg7bifVJ-3_aem_zHjuhljbnTAQQaLDECB7IQ
@@ -49,31 +52,31 @@ Los mismos estaban concatenados con un &.
     - `HTML/Phishing.Agent.BDI` (ESET)  
     - `JS[Phish]` (Avast)
 
-Distribución habitual: correos con archivos HTML adjuntos o enlaces que redirigen a formularios falsos.
+**Distribución habitual:** correos con archivos HTML adjuntos o enlaces que redirigen a formularios falsos.
 
  ![Figura 3](/images/4.png)
 
-Al revisar los resultados, noté que el análisis disponible en VirusTotal había sido realizado hace un tiempo.  
-Por eso decidí repetir el análisis para obtener información más actualizada.
+**Al revisar los resultados**, noté que **el análisis disponible en VirusTotal** había sido realizado **hacía un tiempo.**
+Por eso, decidí **repetir el análisis** para obtener **información más actualizada.**
 
  ![Figura 4](/images/5.png)
 
 - **Resultados adicionales**:  
   - Aparecieron **más detecciones y etiquetas** que antes no estaban presentes.
 
-- **El nuevo analisis del hash arrojó detección como:**  
+- **El nuevo análisis del hash arrojó detección como:**  
   - `Trojan:Win/Hoax.Akgpp` (AliCloud)  
   - `Other:SNH-gen [Phish]` (AVG, Avast)  
   - `HTML/Hoax.Agent.P` (ESET-NOD32)  
   - `HTML.Trojan.Agent.10JMG5` (GData)
 
-### 3. Relaciones y comportamiento
-  - En la sección **Relations**, dentro de **Contacted URLs** no encontre nada que me llame la atencion.
-  - Si bien las conexiones aparecen como HTTP, corresponden a servicios legítimos (Google y Let's Encrypt) y no representan riesgo, ya que los datos transmitidos no son sensibles ni maliciosos.
+### 3. Relaciones
+  - En la sección **Relations**, dentro de **Contacted URLs**, no encontré nada que me llamara la atención.
+  - Si bien las conexiones aparecen como **HTTP**, corresponden a servicios legítimos (**Google y Let's Encrypt**) y no representan riesgo, ya que los datos transmitidos no son sensibles ni maliciosos.
 
  ![Figura 5](/images/6.png)
 
-  - Dentro de **Contacted IP addresses** obesrve mas de **55 direcciones IP**.
+  - Dentro de **Contacted IP addresses** observé mas de **55 direcciones IP**.
   - Una de esas IP estaba marcada como **maliciosa** → también fue analizada en VirusTotal. 
 
  <div align="center">
@@ -84,7 +87,7 @@ Por eso decidí repetir el análisis para obtener información más actualizada.
 
   - Cabe destacar que esta detección provino de un **solo motor de antivirus**.  
   - Esto **no garantiza que la IP sea maliciosa**, ya que podría tratarse de un **falso positivo**.  
-  - En algunos casos, la alerta se debe a la **reputación histórica** de la IP y no a actividad maliciosa activa.  
+  - En algunos casos, la alerta se debe a la **reputación histórica** de la IP, y no a actividad maliciosa activa.  
 
   ![Figura 7](/images/8.png)
 
@@ -98,7 +101,6 @@ Por eso decidí repetir el análisis para obtener información más actualizada.
   - El certificado está en versión **V1**, lo cual es inusual, ya que los estándares actuales utilizan **V3** con medidas de seguridad adicionales.  
   - La validez del certificado es **inusualmente larga** (casi 100 años), lo que es atípico en certificados SSL/TLS legítimos.  
   - El certificado **no presenta alertas de revocación**, pero está emitido por un **CA de reputación general**.  
-  - Esto indica que la IP **podría cifrar la comunicación**, pero **no garantiza la legitimidad del contenido** ni que el servicio sea seguro.
  
 <div align="center">
   
@@ -106,21 +108,22 @@ Por eso decidí repetir el análisis para obtener información más actualizada.
 
 </div>
 
-VirusTotal reporta varios archivos que se han comunicado con la dirección IP analizada, con distintos niveles de detección.
+VirusTotal reporta **varios archivos** que se han comunicado con la dirección IP analizada, con **distintos niveles de detección**.
 
   ![Figura 9](/images/10.png)
 
-- Algunos archivos presentan **alta detección**, indicando que la dirección IP ha estado relacionado con **malware o software potencialmente peligroso**.  
+- Algunos archivos presentan **alta detección**, indicando que la dirección IP ha estado relacionada con **malware o software potencialmente peligroso**.  
 - Otros archivos no muestran detecciones, lo que podría deberse a **archivos legítimos o falsos positivos**.
 
 Además, en la sección **Contained in Graphs**, la dirección IP aparece vinculada a **múltiples actividades maliciosas documentadas por la comunidad**, como campañas relacionadas con **KoiLoader, Quakbot, HijackLoader y DarkCloud**.
 
   ![Figura 10](/images/11.png)
 
-- En conjunto, estos hallazgos refuerzan la hipótesis de que la direccion IP **no es confiable** y puede ser utilizada como **vector de phishing o distribución de malware**.
+- En conjunto, estos hallazgos refuerzan la hipótesis de que la dirección IP **no es confiable** y puede ser utilizada como **vector de phishing o distribución de malware**.
 
 Volviendo al **hash** analizado anteriormente, lo último que revisaremos es la sección **Behavior**, que muestra las acciones observadas durante la ejecución o interacción de los archivos asociados con el dominio analizado.
 
+### 4. Comportamiento
 
 ---
 
