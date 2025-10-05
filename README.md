@@ -86,7 +86,7 @@ Por eso, decidí **repetir el análisis** para obtener **información más actua
 </div>
 
   - Cabe destacar que la detección **provino de un único motor antivirus**, pero se observó en tres direcciones IP distintas.  
-  - Esto **no garantiza que la IP sea maliciosa**, ya que podría tratarse de un **falso positivo**.  
+  - Esto **no garantiza que las direcciones IP sean maliciosas**, ya que podría tratarse de un **falso positivo**.  
   - En algunos casos, la alerta se debe a la **reputación histórica** de la IP, y no a actividad maliciosa activa.  
 
   ![Figura 7](/images/8.png)
