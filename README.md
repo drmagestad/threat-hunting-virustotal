@@ -91,6 +91,10 @@ Por eso, decidí **repetir el análisis** para obtener **información más actua
 
   ![Figura 7](/images/8.png)
 
+  ![Figura 7](/images/8.1.png)
+
+  ![Figura 7](/images/8.2.png)
+
 - Revisé el **certificado SSL/TLS** presentado por la dirección IP analizada.
   - Versión: V1  
   - Emisor: `C=US, CN=global.qwilt.com`  
