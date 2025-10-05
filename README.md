@@ -105,7 +105,7 @@ VirusTotal reporta **varios archivos** que se han comunicado con las direcciones
 
   ![Figura 10](/images/11.png)
 
-- En conjunto, estos hallazgos refuerzan la hipótesis de que la dirección IP **no es confiable** y puede ser utilizada como **vector de phishing o distribución de malware**.
+- En conjunto, estos hallazgos refuerzan la hipótesis de que las direcciones IP **no son confiables** y pueden ser utilizadas como **vector de phishing o distribución de malware**.
 
 Volviendo al **hash** analizado anteriormente, lo último que revisaremos es la sección **Behavior**, que muestra las acciones observadas durante la ejecución o interacción de los archivos asociados con el dominio analizado.
 
@@ -114,6 +114,10 @@ Volviendo al **hash** analizado anteriormente, lo último que revisaremos es la 
 ---
 
 ## 🎯 Conclusión
+
+El análisis de comportamiento indica que el enlace malicioso imitaba un sitio legítimo, cargando librerías comunes desde CDNs conocidos, pero al mismo tiempo redireccionaba y transmitía datos hacia múltiples servicios externos.
+El uso de certificados válidos y conexiones a proveedores legítimos sugiere un intento deliberado de camuflar la actividad maliciosa entre tráfico normal.
+
 Este análisis me permitió:
 - Practicar el uso de **VirusTotal** en un caso real.  
 - Entender mejor cómo identificar **indicadores de compromiso (IOCs)**.  
