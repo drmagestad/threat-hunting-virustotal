@@ -77,7 +77,7 @@ Por eso, decidí **repetir el análisis** para obtener **información más actua
  ![Figura 5](/images/6.png)
 
   - Dentro de **Contacted IP addresses** observé mas de **55 direcciones IP**.
-  - Una de esas IP estaba marcada como **maliciosa** → también fue analizada en VirusTotal. 
+  - Algunas de las direcciones IP fueron **identificadas como maliciosas** y analizadas posteriormente en VirusTotal. 
 
  <div align="center">
   
