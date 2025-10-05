@@ -96,14 +96,12 @@ Por eso, decidí **repetir el análisis** para obtener **información más actua
   ![Figura 7](/images/8.2.png)
 
 
-VirusTotal reporta **varios archivos** que se han comunicado con la dirección IP analizada, con **distintos niveles de detección**.
+VirusTotal reporta **varios archivos** que se han comunicado con las direcciones IP analizadas, con **distintos niveles de detección**.
 
   ![Figura 9](/images/10.png)
 
-- Algunos archivos presentan **alta detección**, indicando que la dirección IP ha estado relacionada con **malware o software potencialmente peligroso**.  
+- Algunos archivos presentan **alta detección**, indicando que las direcciones IP han estado relacionadas con **malware o software potencialmente peligroso**.  
 - Otros archivos no muestran detecciones, lo que podría deberse a **archivos legítimos o falsos positivos**.
-
-Además, en la sección **Contained in Graphs**, la dirección IP aparece vinculada a **múltiples actividades maliciosas documentadas por la comunidad**, como campañas relacionadas con **KoiLoader, Quakbot, HijackLoader y DarkCloud**.
 
   ![Figura 10](/images/11.png)
 
