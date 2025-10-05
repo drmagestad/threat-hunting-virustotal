@@ -95,22 +95,6 @@ Por eso, decidí **repetir el análisis** para obtener **información más actua
 
   ![Figura 7](/images/8.2.png)
 
-- Revisé el **certificado SSL/TLS** presentado por la dirección IP analizada.
-  - Versión: V1  
-  - Emisor: `C=US, CN=global.qwilt.com`  
-  - Validez: desde `2019-01-10` hasta su fecha de expiración  
-  - Número de serie y thumbprint disponibles en VirusTotal
-
-- Observaciones:  
-  - El certificado está en versión **V1**, lo cual es inusual, ya que los estándares actuales utilizan **V3** con medidas de seguridad adicionales.  
-  - La validez del certificado es **inusualmente larga** (casi 100 años), lo que es atípico en certificados SSL/TLS legítimos.  
-  - El certificado **no presenta alertas de revocación**, pero está emitido por un **CA de reputación general**.  
- 
-<div align="center">
-  
-  ![Figura 8](/images/9.png)
-
-</div>
 
 VirusTotal reporta **varios archivos** que se han comunicado con la dirección IP analizada, con **distintos niveles de detección**.
 
