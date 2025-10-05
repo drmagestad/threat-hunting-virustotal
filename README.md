@@ -9,9 +9,9 @@ El objetivo principal es **aprender y practicar técnicas de investigación con 
 El enlace recibido simulaba ser parte de una **plataforma de inversión**.
 El proceso descrito era:
 
-Ingresar datos personales (**nombre, apellido, correo y teléfono**).
+  - Ingresar datos personales (**nombre, apellido, correo y teléfono**).
 
-Recibir una llamada de un supuesto **"asesor"** solicitando una **inversión inicial de 10.000 pesos.**
+  - Recibir una llamada de un supuesto **"asesor"** solicitando una **inversión inicial de 10.000 pesos.**
 
 **(Hipótesis)** Posible entrega de un APK malicioso en una etapa posterior.
 
