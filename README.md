@@ -108,7 +108,10 @@ Volviendo al **hash** analizado anteriormente, lo último que revisaremos es la 
 
 ### 4. Comportamiento
 
----
+El análisis de comportamiento indica que el enlace malicioso imitaba un sitio legítimo, cargando librerías comunes desde CDNs conocidos, pero al mismo tiempo redireccionando y transmitiendo datos hacia múltiples servicios externos.
+El uso de certificados válidos y conexiones a proveedores legítimos parece ser un intento de camuflar la actividad maliciosa entre tráfico normal.
+
+Este tipo de phishing se alinea con campañas actuales de fraude financiero, donde se imita la estructura visual de portales de inversión o entidades bancarias para engañar al usuario. Aunque el tráfico observado no muestra exfiltración directa, el patrón de descargas y conexiones externas confirma la presencia de una amenaza activa y potencialmente peligrosa para los usuarios que interactúen con el sitio.
 
 ## 🎯 Conclusión
 
