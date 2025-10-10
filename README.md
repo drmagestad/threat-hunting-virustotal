@@ -118,8 +118,7 @@ Por último, se detectaron otros dominios que replicaban la misma estructura y p
 
 ## 🎯 Conclusión
 
-El análisis de comportamiento indica que el enlace malicioso imitaba un sitio legítimo, cargando librerías comunes desde CDNs conocidos, pero al mismo tiempo redireccionaba y transmitía datos hacia múltiples servicios externos.
-El uso de certificados válidos y conexiones a proveedores legítimos sugiere un intento deliberado de camuflar la actividad maliciosa entre tráfico normal.
+El análisis permitió confirmar que el enlace forma parte de una infraestructura de phishing activo, diseñada para imitar sitios legítimos y obtener información personal bajo apariencia confiable. Si bien no se evidenció descarga directa de malware, la combinación de dominios relacionados, recursos falsificados y tráfico encubierto demuestra una amenaza real que requiere bloqueo y seguimiento.
 
 Este análisis me permitió:
 - Practicar el uso de **VirusTotal** en un caso real.  
