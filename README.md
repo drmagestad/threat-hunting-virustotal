@@ -102,7 +102,7 @@ VirusTotal reporta **varios archivos** que se han comunicado con las direcciones
 
 - Algunos archivos presentan **alta detección**, indicando que las direcciones IP han estado relacionadas con **malware o software potencialmente peligroso**.  
 - Otros archivos no muestran detecciones, lo que podría deberse a **archivos legítimos o falsos positivos**.
-- En conjunto, estos hallazgos refuerzan la hipótesis de que las direcciones IP **no son confiables** y pueden ser utilizadas como **vector de phishing o distribución de malware**.
+- En conjunto, estos hallazgos refuerzan la hipótesis de que el dominio **no es confiable** y puede ser utilizado como **vector de phishing o distribución de malware**.
 
 Volviendo al **hash** analizado anteriormente, lo último que revisaremos es la sección **Behavior**, que muestra las acciones observadas durante la ejecución o interacción de los archivos asociados con el dominio analizado.
 
