@@ -5,7 +5,7 @@ El objetivo principal es **aprender y practicar técnicas de investigación con 
 
 ---
 
-## 📌 Contexto
+## Contexto
 El enlace recibido simulaba ser parte de una **plataforma de inversión**.
 El proceso descrito era:
 
@@ -19,7 +19,7 @@ Aclaro que **no avancé en el proceso de la llamada**. Solo investigué el enlac
 
 ---
 
-## 🔍 Análisis realizado
+## Análisis realizado
 
 ### 1. Análisis inicial en VirusTotal
 El enlace completo no arrojaba detecciones sospechosas.
@@ -116,7 +116,7 @@ También se identificó que el sitio combinaba librerías legítimas desde CDNs 
 
 Por último, se detectaron otros dominios que replicaban la misma estructura y publicaban contenido idéntico, lo que sugiere la existencia de una campaña coordinada de phishing.
 
-## 🎯 Conclusión
+## Conclusión
 
 El análisis permitió confirmar que el enlace forma parte de una infraestructura de phishing activo, diseñada para imitar sitios legítimos y obtener información personal bajo apariencia confiable. Si bien no se evidenció descarga directa de malware, la combinación de dominios relacionados, recursos falsificados y tráfico encubierto demuestra una amenaza real que requiere bloqueo y seguimiento.
 
@@ -129,6 +129,6 @@ Es mi **primer acercamiento al threat hunting**, por lo que el enfoque es básic
 
 ---
 
-## ⚠️ Nota de seguridad
+## Nota de seguridad
 - No se incluyen enlaces activos ni archivos maliciosos en este repositorio.  
 - Todo el contenido compartido (hashes, capturas y reportes) es únicamente con fines de **aprendizaje**.
