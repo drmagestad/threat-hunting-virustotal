@@ -114,6 +114,8 @@ El uso de certificados válidos y conexiones a proveedores legítimos parece ser
 
 Este tipo de phishing se alinea con campañas actuales de fraude financiero, donde se imita la estructura visual de portales de inversión o entidades bancarias para engañar al usuario. Aunque el tráfico observado no muestra exfiltración directa, el patrón de descargas y conexiones externas confirma la presencia de una amenaza activa y potencialmente peligrosa para los usuarios que interactúen con el sitio.
 
+Finalmente, aclaro que también utilicé urlscan.io para observar el comportamiento desde otra perspectiva: con esa herramienta pude identificar exactamente desde qué dominios se cargaban los recursos y cómo se llamaban. Al acceder al enlace vi que se cargaba un dominio que yo ya conocía (procedente de mi país); desde urlscan comprobé que uno de los recursos tenía el mismo nombre que el dominio oficial (intento evidente de suplantación). Además identifiqué otros dominios que replicaban el mismo dominio oficial y publicaban la misma noticia, lo que refuerza la hipótesis de una campaña coordinada de phishing.
+
 ## 🎯 Conclusión
 
 El análisis de comportamiento indica que el enlace malicioso imitaba un sitio legítimo, cargando librerías comunes desde CDNs conocidos, pero al mismo tiempo redireccionaba y transmitía datos hacia múltiples servicios externos.
